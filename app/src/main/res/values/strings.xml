@@ -2,4 +2,27 @@
     <string name="app_name">BooksBnBBusinessCard</string>
     <string name="app_name_actual">Books, Beds &amp; Breakfast</string>
     <string name="andB">&amp; B</string>
+    <string name="capitalB">B</string>
+    <string name="ooks">OOKS,\ </string>
+    <string name="eds">EDS\  </string>
+    <string name="reakfast">REAKFAST</string>
+    <string name="capitalV">V</string>
+    <string name="capitalC">C</string>
+    <string name="iadelle">IA DELLE\ </string>
+    <string name="ostellazioni">OSTELLAZIONI\ </string>
+    <string name="civico">305, R</string>
+    <string name="oma">OMA</string>
+    <string name="site">WWW.BOOKSBNB.EU</string>
+    <string name="phoneNumber">+39 370 3438349</string>
+    <string name="email">INFO@BOOKSBNB.EU</string>
+    <string name="atBooks">\@BOOKSBNB</string>
+    <string name="hall">Hall</string>
+    <string name="tolkien">Tolkien</string>
+    <string name="follett">Follett</string>
+    <string name="gaiman">Gaiman</string>
+    <string name="hallDesc">A vintage furnished common hall</string>
+    <string name="tolkienDesc">Our deluxe bedroom with private bathroom</string>
+    <string name="follettTwinDesc">Twin bedroom with shared bathroom</string>
+    <string name="follettDoubleDesc">Double bedroom with shared bathroom</string>
+    <string name="gaimanDesc">Single bedroom with shared bathroom</string>
 </resources>

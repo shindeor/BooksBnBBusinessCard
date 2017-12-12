@@ -1,83 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#455a64"
     android:orientation="vertical"
+    android:background="#455a64"
     tools:context="eu.booksbnb.booksbnbbusinesscard.Main">
+
     <LinearLayout
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="40dp"></LinearLayout>
+        android:layout_height="30dp"
+        android:orientation="horizontal" />
+
     <RelativeLayout
         android:id="@+id/logo_section"
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="365dp"
         android:background="#e3dfd7">
-    <ImageView
-        android:id="@+id/bnb_logo"
-        android:layout_alignParentTop="true"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:padding="30dp"
-        android:src="@drawable/booksbnblogo"
-        android:scaleType="fitCenter"
-        android:background="#e3dfd7"/>
-    <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#e3dfd7">
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_marginTop="45dp"
+            android:id="@+id/bnb_logo"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_alignParentTop="true"
+            android:onClick="changeImage"
+            android:scaleType="fitCenter"
+            android:src="@drawable/booksbnblogonew" />
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="B"
-            android:textColor="#455a64"
-            android:fontFamily="@font/californianfb"
-            android:textSize="32sp"/>
+            android:orientation="vertical">
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/pic_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OOKS, "
-            android:textColor="#455a64"
-            android:fontFamily="@font/californianfb"
-            android:textSize="24sp"/>
-        <TextView
             android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="B"
             android:textColor="#455a64"
             android:fontFamily="@font/californianfb"
-            android:textSize="32sp"/>
+            android:text=""
+            android:textSize="20sp"/>
         <TextView
-            android:gravity="center"
-            android:layout_width="wrap_content"
+            android:id="@+id/pic_desc"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="EDS "
+            android:gravity="center"
             android:textColor="#455a64"
             android:fontFamily="@font/californianfb"
-            android:textSize="24sp"/>
-        <TextView
-            android:gravity="center"
+            android:text=""
+            android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/andB"
-            android:textColor="#455a64"
-            android:fontFamily="@font/californianfb"
-            android:textSize="32sp"/>
-        <TextView
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="REAKFAST"
-            android:textColor="#455a64"
-            android:fontFamily="@font/californianfb"
-            android:textSize="24sp"/>
-    </LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#e3dfd7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:text="@string/capitalB"
+                android:textColor="#455a64"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:text="@string/ooks"
+                android:textColor="#455a64"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:gravity="center"
+                android:text="@string/capitalB"
+                android:textColor="#455a64"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:gravity="center"
+                android:text="@string/eds"
+                android:textColor="#455a64"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:gravity="center"
+                android:text="@string/andB"
+                android:textColor="#455a64"
+                android:textSize="32sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/californianfb"
+                android:gravity="center"
+                android:text="@string/reakfast"
+                android:textColor="#455a64"
+                android:textSize="24sp" />
+        </LinearLayout>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -109,42 +141,42 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="20sp"
-            android:text="V"/>
+            android:text="@string/capitalV"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="IA DELLE "/>
+            android:text="@string/iadelle"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="20sp"
-            android:text="C"/>
+            android:text="@string/capitalC"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="OSTELLAZIONI "/>
+            android:text="@string/ostellazioni"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="20sp"
-            android:text="305, R"/>
+            android:text="@string/civico"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="OMA"/>
+            android:text="@string/oma"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -168,7 +200,7 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="WWW.BOOKSBNB.EU"/>
+            android:text="@string/site"/>
     </LinearLayout>
     <LinearLayout
         android:onClick="callBnB"
@@ -190,7 +222,7 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="+39 370 3438349"/>
+            android:text="@string/phoneNumber"/>
     </LinearLayout>
     <LinearLayout
         android:onClick="sendEmail"
@@ -212,7 +244,7 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="INFO@BOOKSBNB.EU"/>
+            android:text="@string/email"/>
     </LinearLayout>
     <LinearLayout
         android:layout_weight="1"
@@ -238,7 +270,7 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="\@BOOKSBNB"/>
+            android:text="@string/atBooks"/>
     </LinearLayout>
     <LinearLayout
         android:onClick="openInstagram"
@@ -259,8 +291,8 @@
             android:textColor="#e3dfd7"
             android:fontFamily="@font/californianfb"
             android:textSize="16sp"
-            android:text="\@BOOKSBNB"/>
+            android:text="@string/atBooks"/>
         </LinearLayout>
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
 </LinearLayout>
