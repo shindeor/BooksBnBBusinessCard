@@ -10,7 +10,11 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+import eu.booksbnb.booksbnbbusinesscard.OnSwipeTouchListener;
+
 
 public class Main extends AppCompatActivity {
     int index = 0;
@@ -39,6 +43,25 @@ public class Main extends AppCompatActivity {
         picDesc[3] = getResources().getString(R.string.follettTwinDesc);
         picDesc[4] = getResources().getString(R.string.follettDoubleDesc);
         picDesc[5] = getResources().getString(R.string.gaimanDesc);
+        RelativeLayout logoScrolling = (RelativeLayout) findViewById(R.id.logo_section);
+        logoScrolling.setOnTouchListener(new OnSwipeTouchListener(Main.this) {
+            public void onSwipeRight() {
+                if (index == 0) {
+                    index = 5;
+                } else {
+                    index--;
+                }
+                changeImage();
+            }
+            public void onSwipeLeft() {
+                if (index < 5) {
+                    index++;
+                } else {
+                    index = 0;
+                }
+                changeImage();
+            }
+        });
     }
 
     public void openWebsite(View view) {
@@ -87,12 +110,7 @@ public class Main extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void changeImage(View view) {
-        if (index < 5) {
-            index++;
-        } else {
-            index = 0;
-        }
+    public void changeImage() {
         ImageView logoView = (ImageView) findViewById(R.id.bnb_logo);
         TextView nameView = (TextView) findViewById(R.id.pic_name);
         TextView descView = (TextView) findViewById(R.id.pic_desc);

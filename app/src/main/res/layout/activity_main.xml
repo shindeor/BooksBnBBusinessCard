@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="#455a64"
     tools:context="eu.booksbnb.booksbnbbusinesscard.Main">
-
     <LinearLayout
         android:id="@+id/top_bar"
         android:layout_width="match_parent"
@@ -24,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="290dp"
             android:layout_alignParentTop="true"
-            android:onClick="changeImage"
             android:scaleType="fitCenter"
             android:src="@drawable/booksbnblogonew" />
         <LinearLayout
