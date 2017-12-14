@@ -13,14 +13,22 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import eu.booksbnb.booksbnbbusinesscard.OnSwipeTouchListener;
 
 
 public class Main extends AppCompatActivity {
+    /**
+     * Initialize the image list, picNames, picDescriptions, and index int for the carousel
+     */
     int index = 0;
     int[] images = new int[6];
     String[] picNames = new String[6];
     String[] picDesc = new String[6];
+
+    /**
+     * In the onCreate method declare the images in the image list, together with all the
+     * names of the pics and descriptions.
+     * Set up the swipe left and right methods for the carousel
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +51,11 @@ public class Main extends AppCompatActivity {
         picDesc[3] = getResources().getString(R.string.follettTwinDesc);
         picDesc[4] = getResources().getString(R.string.follettDoubleDesc);
         picDesc[5] = getResources().getString(R.string.gaimanDesc);
+        //Select the section that should scroll the image
         RelativeLayout logoScrolling = (RelativeLayout) findViewById(R.id.logo_section);
         logoScrolling.setOnTouchListener(new OnSwipeTouchListener(Main.this) {
             public void onSwipeRight() {
+                //If the index is 0, set it ti 5 so the image carousel wraps
                 if (index == 0) {
                     index = 5;
                 } else {
@@ -54,6 +64,7 @@ public class Main extends AppCompatActivity {
                 changeImage();
             }
             public void onSwipeLeft() {
+                //If the index is 5, set it to 0 so it wraps
                 if (index < 5) {
                     index++;
                 } else {
@@ -64,6 +75,9 @@ public class Main extends AppCompatActivity {
         });
     }
 
+    /**
+     * All the Intents methods to link to website, facebook, instagram, maps, phone and email
+     */
     public void openWebsite(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("http://www.booksbnb.eu"));
@@ -74,7 +88,6 @@ public class Main extends AppCompatActivity {
         intent.setData(Uri.parse("tel:" + "+393703438349"));
         startActivity(intent);
     }
-
     public void openFacebook(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/489907131199202"));
         if (intent.resolveActivity(getPackageManager()) != null) {
@@ -83,9 +96,7 @@ public class Main extends AppCompatActivity {
             intent.setData(Uri.parse("http://facebook.com/booksbnb"));
             startActivity(intent);
         }
-
     }
-
     public void openInstagram(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.instagram.com/_u/booksbnb/"));
         intent.setPackage("com.instagram.android");
@@ -110,10 +121,15 @@ public class Main extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Method to change the image when swipes occur
+     */
     public void changeImage() {
+        //Select the ImageView, TextView for name, and TextView for description
         ImageView logoView = (ImageView) findViewById(R.id.bnb_logo);
         TextView nameView = (TextView) findViewById(R.id.pic_name);
         TextView descView = (TextView) findViewById(R.id.pic_desc);
+        //Set new image, name, and description
         logoView.setImageResource(images[index]);
         nameView.setText(picNames[index]);
         descView.setText(picDesc[index]);
