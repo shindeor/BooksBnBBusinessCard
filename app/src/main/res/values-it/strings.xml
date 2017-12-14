@@ -11,18 +11,18 @@
     <string name="iadelle">IA DELLE\ </string>
     <string name="ostellazioni">OSTELLAZIONI\ </string>
     <string name="civico">305, R</string>
-    <string name="oma">OME</string>
+    <string name="oma">OMA</string>
     <string name="site">WWW.BOOKSBNB.EU</string>
     <string name="phoneNumber">+39 370 3438349</string>
     <string name="email">INFO@BOOKSBNB.EU</string>
     <string name="atBooks">\@BOOKSBNB</string>
-    <string name="hall">Hall</string>
+    <string name="hall">Sala</string>
     <string name="tolkien">Tolkien</string>
     <string name="follett">Follett</string>
     <string name="gaiman">Gaiman</string>
-    <string name="hallDesc">A vintage furnished common hall</string>
-    <string name="tolkienDesc">Our deluxe bedroom with private bathroom</string>
-    <string name="follettTwinDesc">Twin bedroom with shared bathroom</string>
-    <string name="follettDoubleDesc">Double bedroom with shared bathroom</string>
-    <string name="gaimanDesc">Single bedroom with shared bathroom</string>
+    <string name="hallDesc">Una sala comune dal gusto vintage</string>
+    <string name="tolkienDesc">La nostra camera deluxe con bagno privato</string>
+    <string name="follettTwinDesc">Camera doppia con bagno in comune</string>
+    <string name="follettDoubleDesc">Camera matrimoniale con bagno in comune</string>
+    <string name="gaimanDesc">Camera singola con bagno in comune</string>
 </resources>

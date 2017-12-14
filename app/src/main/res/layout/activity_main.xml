@@ -129,7 +129,7 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/maps"
-            android:alpha="0.5"
+            android:alpha="0.7"
             android:scaleType="fitCenter"/>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -192,7 +192,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/browser"
-            android:alpha="0.5"/>
+            android:alpha="0.7"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
         android:layout_gravity="center">
         <ImageView
             android:padding="4dp"
-            android:alpha="0.5"
+            android:alpha="0.7"
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/phone"/>
@@ -233,7 +233,7 @@
         android:layout_gravity="center">
         <ImageView
             android:padding="4dp"
-            android:alpha="0.5"
+            android:alpha="0.7"
             android:layout_width="30dp"
             android:src="@drawable/email"
             android:layout_height="match_parent" />
@@ -261,7 +261,7 @@
         android:layout_gravity="center">
         <ImageView
             android:layout_width="30dp"
-            android:alpha="0.5"
+            android:alpha="0.7"
             android:layout_height="match_parent"
             android:src="@drawable/facebook"/>
         <TextView
@@ -284,7 +284,8 @@
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/instagram"
-            android:alpha="0.5"/>
+
+            android:alpha="0.7"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

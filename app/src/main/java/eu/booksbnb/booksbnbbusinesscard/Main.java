@@ -54,7 +54,13 @@ public class Main extends AppCompatActivity {
 
     public void openFacebook(View view) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/489907131199202"));
+        if (intent.resolveActivity(getPackageManager()) != null) {
         startActivity(intent);
+        } else {
+            intent.setData(Uri.parse("http://facebook.com/booksbnb"));
+            startActivity(intent);
+        }
+
     }
 
     public void openInstagram(View view) {
