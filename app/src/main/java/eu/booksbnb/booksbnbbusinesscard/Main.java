@@ -2,14 +2,20 @@ package eu.booksbnb.booksbnbbusinesscard;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.Image;
 import android.net.Uri;
+import android.support.v4.graphics.TypefaceCompatUtil;
 import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.style.RelativeSizeSpan;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,7 +58,7 @@ public class Main extends AppCompatActivity {
         picDesc[4] = getResources().getString(R.string.follettDoubleDesc);
         picDesc[5] = getResources().getString(R.string.gaimanDesc);
         //Select the section that should scroll the image
-        RelativeLayout logoScrolling = (RelativeLayout) findViewById(R.id.logo_section);
+        LinearLayout logoScrolling = (LinearLayout) findViewById(R.id.logo_section);
         logoScrolling.setOnTouchListener(new OnSwipeTouchListener(Main.this) {
             public void onSwipeRight() {
                 //If the index is 0, set it ti 5 so the image carousel wraps
@@ -73,6 +79,24 @@ public class Main extends AppCompatActivity {
                 changeImage();
             }
         });
+        //B&B Name Span
+        String bName = getResources().getString(R.string.booksBedsBreakfast);
+        SpannableString ss1 = new SpannableString(bName);
+        ss1.setSpan(new RelativeSizeSpan(1.5f), 0,1, 0);
+        ss1.setSpan(new RelativeSizeSpan(1.5f), 7,8, 0);
+        ss1.setSpan(new RelativeSizeSpan(1.5f), 11,15, 0);
+        TextView mainName = (TextView) findViewById(R.id.booksBedsBreakfast);
+        mainName.setText(ss1);
+        //Address Name Span
+        String address = getResources().getString(R.string.address);
+        SpannableString ss2 = new SpannableString(address);
+        ss2.setSpan(new RelativeSizeSpan(1.3f), 0, 1, 0);
+        ss2.setSpan(new RelativeSizeSpan(1.3f), 4, 5, 0);
+        ss2.setSpan(new RelativeSizeSpan(1.3f), 10, 11, 0);
+        ss2.setSpan(new RelativeSizeSpan(1.3f), 24, 27, 0);
+        ss2.setSpan(new RelativeSizeSpan(1.3f), 29, 30, 0);
+        TextView addressView = (TextView) findViewById(R.id.address_view);
+        addressView.setText(ss2);
     }
 
     /**

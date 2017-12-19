@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context="eu.booksbnb.booksbnbbusinesscard.Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#455a64"
-    tools:context="eu.booksbnb.booksbnbbusinesscard.Main">
+    android:background="#455a64">
+<!--Start Main ScrollView-->
+    <!--Logo/Image Gallery-->
     <LinearLayout
-        android:id="@+id/top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal" />
-
-    <RelativeLayout
         android:id="@+id/logo_section"
         android:layout_width="match_parent"
-        android:layout_height="365dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
         android:background="#e3dfd7">
-        <ImageView
-            android:layout_marginTop="45dp"
-            android:id="@+id/bnb_logo"
-            android:layout_width="match_parent"
-            android:layout_height="290dp"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitCenter"
-            android:src="@drawable/booksbnblogonew" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
         <TextView
             android:id="@+id/pic_name"
             android:layout_width="match_parent"
@@ -47,147 +33,72 @@
             android:fontFamily="@font/californianfb"
             android:text=""
             android:textSize="20sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/bnb_logo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/booksbnblogonew"
+            android:layout_marginBottom="40dp"
+            android:contentDescription="@string/gallery" />
+        <TextView
+            android:id="@+id/booksBedsBreakfast"
+            android:gravity="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:background="#e3dfd7"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:text="@string/capitalB"
-                android:textColor="#455a64"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:text="@string/ooks"
-                android:textColor="#455a64"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:gravity="center"
-                android:text="@string/capitalB"
-                android:textColor="#455a64"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:gravity="center"
-                android:text="@string/eds"
-                android:textColor="#455a64"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:gravity="center"
-                android:text="@string/andB"
-                android:textColor="#455a64"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/californianfb"
-                android:gravity="center"
-                android:text="@string/reakfast"
-                android:textColor="#455a64"
-                android:textSize="24sp" />
-        </LinearLayout>
-    </RelativeLayout>
+            android:fontFamily="@font/californianfb"
+            android:textSize="24dp"
+            android:textColor="#455a64"
+            android:text=""/>
+    </LinearLayout>
+    <!--Contact Info-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:orientation="vertical">
-    <LinearLayout
-        android:onClick="openMaps"
-        android:layout_weight="1"
-        android:layout_height="0dp"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
-        <ImageView
-            android:padding="4dp"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/maps"
-            android:alpha="0.7"
-            android:scaleType="fitCenter"/>
+        <!--Address-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:onClick="openMaps"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
             android:layout_gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="20sp"
-            android:text="@string/capitalV"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="16sp"
-            android:text="@string/iadelle"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="20sp"
-            android:text="@string/capitalC"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="16sp"
-            android:text="@string/ostellazioni"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="20sp"
-            android:text="@string/civico"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
-            android:textSize="16sp"
-            android:text="@string/oma"/>
+            <ImageView
+                android:contentDescription="@string/mapIcon"
+                android:padding="4dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/maps"
+                android:alpha="0.7"
+                android:scaleType="fitCenter"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+            <TextView
+                android:id="@+id/address_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#e3dfd7"
+                android:fontFamily="@font/californianfb"
+                android:textSize="16sp"
+                android:text="@string/address"/>
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+        <!--Website-->
+        <LinearLayout
         android:onClick="openWebsite"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
         <ImageView
+            android:contentDescription="@string/browserIcon"
             android:layout_width="30dp"
             android:padding="4dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:scaleType="fitCenter"
             android:src="@drawable/browser"
             android:alpha="0.7"/>
@@ -200,18 +111,19 @@
             android:textSize="16sp"
             android:text="@string/site"/>
     </LinearLayout>
-    <LinearLayout
+        <!--Phone Number-->
+        <LinearLayout
         android:onClick="callBnB"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
         <ImageView
+            android:contentDescription="@string/phoneIcon"
             android:padding="4dp"
             android:alpha="0.7"
             android:layout_width="30dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:src="@drawable/phone"/>
         <TextView
             android:layout_gravity="center"
@@ -222,19 +134,20 @@
             android:textSize="16sp"
             android:text="@string/phoneNumber"/>
     </LinearLayout>
-    <LinearLayout
+        <!--Email-->
+        <LinearLayout
         android:onClick="sendEmail"
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
         <ImageView
+            android:contentDescription="@string/emailIcon"
             android:padding="4dp"
             android:alpha="0.7"
             android:layout_width="30dp"
             android:src="@drawable/email"
-            android:layout_height="match_parent" />
+            android:layout_height="30dp" />
         <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -244,11 +157,12 @@
             android:textSize="16sp"
             android:text="@string/email"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_weight="1"
-        android:layout_height="0dp"
+        <!--Social-->
+        <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal">
+        <!--Facebook-->
     <LinearLayout
         android:onClick="openFacebook"
         android:layout_weight="1"
@@ -260,16 +174,20 @@
         <ImageView
             android:layout_width="30dp"
             android:alpha="0.7"
-            android:layout_height="match_parent"
-            android:src="@drawable/facebook"/>
+            android:layout_height="30dp"
+            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:src="@drawable/facebook"
+            android:contentDescription="@string/facebookIcon"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#e3dfd7"
-            android:fontFamily="@font/californianfb"
             android:textSize="16sp"
+            android:fontFamily="@font/californianfb"
             android:text="@string/atBooks"/>
     </LinearLayout>
+        <!--Instagram-->
     <LinearLayout
         android:onClick="openInstagram"
         android:gravity="center"
@@ -280,9 +198,10 @@
         android:layout_gravity="center">
         <ImageView
             android:layout_width="30dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
+            android:padding="4dp"
             android:src="@drawable/instagram"
-
+            android:contentDescription="@string/instagramIcon"
             android:alpha="0.7"/>
         <TextView
             android:layout_width="wrap_content"

@@ -1,17 +1,8 @@
 <resources>
     <string name="app_name">BooksBnBBusinessCard</string>
     <string name="app_name_actual">Books, Beds &amp; Breakfast</string>
-    <string name="andB">&amp; B</string>
-    <string name="capitalB">B</string>
-    <string name="ooks">OOKS,\ </string>
-    <string name="eds">EDS\  </string>
-    <string name="reakfast">REAKFAST</string>
-    <string name="capitalV">V</string>
-    <string name="capitalC">C</string>
-    <string name="iadelle">IA DELLE\ </string>
-    <string name="ostellazioni">OSTELLAZIONI\ </string>
-    <string name="civico">305, R</string>
-    <string name="oma">OMA</string>
+    <string name="booksBedsBreakfast">BOOKS, BEDS &amp; BREAKFAST</string>
+    <string name="address">VIA DELLE COSTELLAZIONI 305, ROMA</string>
     <string name="site">WWW.BOOKSBNB.EU</string>
     <string name="phoneNumber">+39 370 3438349</string>
     <string name="email">INFO@BOOKSBNB.EU</string>
@@ -25,4 +16,11 @@
     <string name="follettTwinDesc">Camera doppia con bagno in comune</string>
     <string name="follettDoubleDesc">Camera matrimoniale con bagno in comune</string>
     <string name="gaimanDesc">Camera singola con bagno in comune</string>
+    <string name="gallery">Galleria</string>
+    <string name="facebookIcon">Facebook</string>
+    <string name="instagramIcon">Instagram</string>
+    <string name="phoneIcon">Telefono</string>
+    <string name="emailIcon">E-Mail</string>
+    <string name="browserIcon">Sito internet</string>
+    <string name="mapIcon">Indirizzo</string>
 </resources>
